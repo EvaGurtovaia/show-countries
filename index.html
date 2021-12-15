@@ -19,9 +19,12 @@ function showCountries() {
             countries.forEach((country) => {
                 const countryCard = document.createElement("div");
                 const countryCardImage = document.createElement("img");
+                const countryCapital = document.createElement("div");
                 countryCard.innerHTML = country.name;
+                countryCapital.innerHTML = country.capital;
                 countryCardImage.src = country.flag;
                 countryCard.appendChild(countryCardImage);
+                countryCard.appendChild(countryCapital);
                 document.getElementById("feed").appendChild(countryCard);
             });
         }
